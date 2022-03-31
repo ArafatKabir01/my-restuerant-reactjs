@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import './Header.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
+import CustomLink from '../CustomLink/CustomLink';
 
 
 const Header = () => {
@@ -16,13 +17,14 @@ const Header = () => {
     <Nav className="me-auto">
     </Nav>
     <Nav >
-      <Link className='ps-4 text-decoration-none fw-bold fs-5 text-dark' to="/about">About</Link>
-      <Link className='ps-4 text-decoration-none fw-bold fs-5 text-dark' to="/food">
+      <CustomLink className='ms-4 text-decoration-none fw-bold fs-5 ' to="/about" >About</CustomLink>
+      
+      <CustomLink className='ms-4 text-decoration-none fw-bold fs-5 ' to="/food">
         Food
-      </Link>
-      <Link className='ps-4 text-decoration-none fw-bold fs-5 text-dark' to="/search">
+      </CustomLink>
+      <CustomLink className='ms-4 text-decoration-none fw-bold fs-5 ' to="/search">
         <FontAwesomeIcon icon={faSearch}></FontAwesomeIcon>
-      </Link>
+      </CustomLink>
     </Nav>
   </Navbar.Collapse>
   </Container>
